@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="jumbotron text-center" style="margin-bottom:0">
+  			<h1>Tela de Registro Padrão</h1>
+  			<p>Vamos criar um form de registro interativo</p> 
+		</div>
+
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		  <a class="navbar-brand" href="#">Registro</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Home</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Contato</a>
+		      </li>   
+		    </ul>
+		  </div>  
+		</nav>
+
+		<div class="container">
+			<br/>
+			<h2>Entre com seus Dados</h2>
+			<hr/>
+			<div class="row">
+				<div class="col-sm-6">
+					<form action="#">
+						<label for="uname"><b>Username</b></label>
+      					<input type="text" placeholder="Username" name="uname" class="form-control" required>
+
+      					<label for="psw"><b>Password</b></label>
+      					<input type="password" placeholder="Senha" name="psw"  class="form-control" id="senha_um" required>
+      					<label for="psw"><b>Password</b></label>
+      					<input type="password" placeholder="Repetir Senha" name="psw"  class="form-control" id="senha_dois" required>
+      					<br/>
+      					<p id="iguais"> Senhas Diferentes </p>
+      					<br/>
+						<button type="submit" class = "btn btn-primary" disabled="True" id="botao">Enviar</button>
+					</form>
+					<br/>
+					<ul>
+						<li>É preciso ter 8 digitos e cumprir outras 2 exigências para se Registrar</li>
+						<li>A senha precisa ter ao menos uma letra </li>
+						<li>A senha precisa ter ao menos um número </li>
+						<li>A senha precisa ter ao menos um símbolo </li>
+
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<h4>Nível de Segurança</h4>
+					<ul>
+						<li class="nivel_um" id="nivel_um">Senha Fraca</li>
+						<li class="nivel" id="nivel_dois">Quase lá</li>
+						<li class="nivel" id="nivel_tres">Inquebrável</li>
+						<li class="nivel" id="nivel_quatro">Nem o Neo descobre essa</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="jumbotron text-center" style="margin-bottom:0">
+  			
+		</div>
+		<link rel="stylesheet" href="{% static 'base_style.css' %}">
+		<script type="text/javascript" src="{% static 'controller.js' %}"> </script>
+		<script type="text/javascript" src="{% static 'register.js' %}"> </script>
+	</body>
+
+</html>

@@ -1,0 +1,19 @@
+.nivel_um{
+	color:red;
+}
+.nivel{
+	display: none;
+}
+#nivel_dois{
+	color:yellow;
+}
+#nivel_tres{
+	color:green;
+}
+#nivel_quatro{
+	color: #FCBE2D;
+}
+#iguais{
+	display : none;
+	color:red;
+}
